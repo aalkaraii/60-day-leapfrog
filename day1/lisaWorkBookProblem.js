@@ -6,6 +6,9 @@ function workbook(n, k, arr) {
     let currentProblem = 1;
     while (currentProblem <= arr[i]) {
       let endProblem = Math.min(currentProblem + k - 1, arr[i]);
+      if (currentProblem <= pageno && pageno <= endProblem) {
+        count++;
+      }
       console.log(pageno, currentProblem, endProblem);
       currentProblem = endProblem + 1;
       pageno++;
